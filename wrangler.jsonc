@@ -1,0 +1,13 @@
+{
+  // Static-assets-only Worker: no script needed, Cloudflare serves ./public
+  "name": "clawed",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  },
+  // Attaches the Worker to the domain (the zone must be on your Cloudflare account)
+  "routes": [
+    { "pattern": "clawed.io", "custom_domain": true }
+  ]
+}
